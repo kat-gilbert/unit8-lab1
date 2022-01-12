@@ -39,6 +39,17 @@ button {
     font-size: 16px;
     padding: 10px;
     color: white;
+    border: none;
+}
+
+.btn {
+    background-color: #0e3c7e;
+    border-radius: 5px;
+    margin: 4px;
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+    border: none;
 }
 
 button:active {
@@ -53,4 +64,15 @@ button:disabled {
 h1, h2, h3 {
     font-size: 40px;
     font-family: 'Caveat', cursive;
+}
+
+.votingTitle {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.disabled {
+    pointer-events: none;
+    background-color: gray;
 }

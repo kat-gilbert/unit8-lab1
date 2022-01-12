@@ -6,21 +6,31 @@ export const AdDesigner = () => {
 let [ flavor, setFlavor ] = useState<string>('');
 let [ theme, setTheme ] = useState<boolean>(false);
 let [ newFontSize, setNewFontSize ] = useState<number>(45);
-let [ disabled, setDisabled ] = useState<boolean>(false);
+//let [ disabled, setDisabled ] = useState<boolean>(false);
+
+    let lightBtn, darkBtn = "btn"
+    let strawBtn, chocBtn, vanBtn = "btn";
+    let disabled = "disabled"
 
     let chooseTheme = "";
-    if (theme) {
+        if (theme) {
         chooseTheme = "darkTheme";
-    }
-
-    // let upSize = () => {
-    //     setFontSize(fontSize += 1);
-    // }
-    // let downSize = () => {
-    //     setFontSize(fontSize -= 1);
-    // }
-    // //connect to font size in flavor className?
-
+        darkBtn = disabled;
+        }
+        else if (!theme) {
+        chooseTheme = "designBox";
+        lightBtn = disabled;
+        }   
+    
+    if (flavor === "Chocolate") {
+        chocBtn = disabled;
+        }
+        else if (flavor === "Vanilla") {
+            vanBtn = disabled;
+        }
+            else if (flavor === "Strawberry") {
+                strawBtn = disabled;
+            }
 
 return (
     <div className="designContainer">
@@ -31,18 +41,18 @@ return (
         <span style={{ fontSize: newFontSize + "px" }} className="flavor">{flavor}</span>
 
         </div>
-        <p>What to Support</p>
+        <p className="votingTitle">What to Support:</p>
     <p>
-        <button onClick={() => setFlavor("Chocolate")}>Chocolate</button>
-        <button onClick={() => setFlavor("Vanilla")}>Vanilla</button>
-        <button onClick={() => setFlavor("Strawberry")}>Strawberry</button>
+        <button className ={chocBtn} onClick={() => setFlavor("Chocolate")}>Chocolate</button>
+        <button className={vanBtn} onClick={() => setFlavor("Vanilla")}>Vanilla</button>
+        <button className={strawBtn} onClick={() => setFlavor("Strawberry")}>Strawberry</button>
     </p>
-    <p>Color Theme</p>
+    <p className="votingTitle">Color Theme:</p>
     <p>
-        <button onClick={()=> setTheme(false)}>Light Theme</button>
-        <button onClick={()=> setTheme(true)}>Dark Theme</button>
+        <button className={lightBtn} onClick={()=> setTheme(false)}>Light Theme</button>
+        <button className={darkBtn} onClick={()=> setTheme(true)}>Dark Theme</button> 
     </p>
-    <p>Font Size</p>
+    <p className="votingTitle">Font Size:</p>
     <p>
         <button onClick={()=> setNewFontSize(newFontSize +=1)}>Up</button>
         {newFontSize}

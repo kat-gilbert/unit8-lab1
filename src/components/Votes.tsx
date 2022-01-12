@@ -10,31 +10,37 @@ export const Votes = () => {
     let totalVotes = chocolate + vanilla + strawberry;
     
     let chocolateAvg = chocolate / totalVotes * 100;
-    chocolateAvg = parseFloat(chocolateAvg.toFixed(1))
+    chocolateAvg = parseFloat(chocolateAvg.toFixed(1)) || 0;
 
     let vanillaAvg = vanilla / totalVotes * 100;
-    vanillaAvg = parseFloat(vanillaAvg.toFixed(1))
+    vanillaAvg = parseFloat(vanillaAvg.toFixed(1)) || 0;
 
     let strawberryAvg = strawberry / totalVotes * 100;
-    strawberryAvg = parseFloat(strawberryAvg.toFixed(1))
+    strawberryAvg = parseFloat(strawberryAvg.toFixed(1)) || 0;
 
 
-    return (
-        <div className="Votes">
-            <h2>Vote Here</h2>
+return (
+    <div className="Votes">
+    <h2>Vote Here</h2>
     <p>
         <button onClick={() => setChocolate(chocolate += 1)}>Chocolate</button>
         <button onClick={() => setVanilla(vanilla += 1)}>Vanilla</button>
         <button onClick={() => setStrawberry(strawberry += 1)}>Strawberry</button>
     </p>
-    <p>Chocolate: {chocolate} ({chocolateAvg}%)</p>
-    <div className={"chocolate"} style={{ width: chocolateAvg + "%" }}></div> 
-
-    <p>Vanilla: {vanilla} ({vanillaAvg}%)</p>
-    <div className={"vanilla"} style={{ width: vanillaAvg + "%" }}></div>
-
-    <p>Strawberry: {strawberry} ({strawberryAvg}%)</p>
-    <div className={"strawberry"} style={{ width: strawberryAvg + "%" }}></div>
+        <div className="chocGraph">
+        <p>Chocolate: {chocolate} ({chocolateAvg}%)</p>
+        <div className={"chocolate"} style={{ width: chocolateAvg + "%" }}></div> 
         </div>
+
+        <div className="vanGraph">
+        <p>Vanilla: {vanilla} ({vanillaAvg}%)</p>
+        <div className={"vanilla"} style={{ width: vanillaAvg + "%" }}></div>
+        </div>
+
+        <div className="strawGraph">
+        <p>Strawberry: {strawberry} ({strawberryAvg}%)</p>
+        <div className={"strawberry"} style={{ width: strawberryAvg + "%" }}></div>
+        </div>
+    </div>
     )
 }
