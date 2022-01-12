@@ -53,5 +53,5 @@ h1, h2, h3 {
 }
 
 .hide {
-    display: none;
+    visibility: hidden;
 }
