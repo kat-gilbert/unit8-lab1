@@ -6,9 +6,17 @@
     text-align: center;
     color: #0e3c7e;
     box-shadow: 2px 5px 5px 0px gray;
+    display: flex;
+    justify-content: space-between;
+ 
 }
 
 .Header h1 {
     padding-bottom: 20px;
     margin-top: 20px;
+    margin-left: 20px;
+}
+
+p {
+    margin-right:30px;
 }

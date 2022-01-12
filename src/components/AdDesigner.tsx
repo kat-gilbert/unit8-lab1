@@ -1,12 +1,12 @@
 import { useState } from "react";
 import "./AdDesigner.css";
+import { Ad } from "./Ad";
 
 export const AdDesigner = () => {
 
 let [ flavor, setFlavor ] = useState<string>('');
 let [ theme, setTheme ] = useState<boolean>(false);
 let [ newFontSize, setNewFontSize ] = useState<number>(45);
-//let [ disabled, setDisabled ] = useState<boolean>(false);
 
     let lightBtn, darkBtn = "btn"
     let strawBtn, chocBtn, vanBtn = "btn";
@@ -31,16 +31,14 @@ let [ newFontSize, setNewFontSize ] = useState<number>(45);
             else if (flavor === "Strawberry") {
                 strawBtn = disabled;
             }
-
 return (
     <div className="designContainer">
 
         <h2>Ad Designer</h2>
-        <div className={"designBox " + chooseTheme}>
-            <h3>Vote For</h3>
-        <span style={{ fontSize: newFontSize + "px" }} className="flavor">{flavor}</span>
 
-        </div>
+        <Ad flavor={flavor} fontSize={newFontSize} darkTheme={theme}/>
+
+        
         <p className="votingTitle">What to Support:</p>
     <p>
         <button className ={chocBtn} onClick={() => setFlavor("Chocolate")}>Chocolate</button>
