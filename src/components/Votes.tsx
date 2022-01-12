@@ -11,10 +11,12 @@ export const Votes = () => {
     
     let chocolateAvg = chocolate / totalVotes * 100;
     chocolateAvg = parseFloat(chocolateAvg.toFixed(1))
+
     let vanillaAvg = vanilla / totalVotes * 100;
-    vanillaAvg = parseFloat(chocolateAvg.toFixed(1))
+    vanillaAvg = parseFloat(vanillaAvg.toFixed(1))
+
     let strawberryAvg = strawberry / totalVotes * 100;
-    strawberryAvg = parseFloat(chocolateAvg.toFixed(1))
+    strawberryAvg = parseFloat(strawberryAvg.toFixed(1))
 
     return (
         <div className="Votes">
@@ -25,7 +27,7 @@ export const Votes = () => {
         <button onClick={() => setStrawberry( strawberry += 1 )}>Strawberry</button>
     </p>
     <p>Chocolate: {chocolate} // {chocolateAvg}%</p>
-    <div className="chocolate" style={{ width: chocolateAvg + "p%" }}></div>
+    <div className="chocolate" style={{ width: chocolateAvg + "%" }}></div>
 
     <p>Vanilla: {vanilla} // {vanillaAvg}%</p>
     <div className="vanilla" style={{ width: vanillaAvg + "%" }}></div>
