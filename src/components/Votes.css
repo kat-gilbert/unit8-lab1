@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+.Votes {
+    color: black; 
+    font-size: 16px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+button {
+    background-color: #0e3c7e;
+    border-radius: 5px;
+    margin: 4px;
+    font-size: 16px;
+    padding: 10px;
+    color: white;
+}
+
+button:active {
+    background-color: #1e60a9;
+    
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Caveat', cursive;
+}
+
+.chocolate {
+    background-color: rgb(85, 49, 49);
+    border: 1px solid black;
+    height: 24px;
+    border-radius: 30px;
+    margin-left: 40px;
+}
+
+.vanilla {
+    background-color:antiquewhite;
+    border: 1px solid black;
+    height: 24px;
+    border-radius: 30px;
+    margin-left: 40px;
+}
+
+.strawberry {
+    background-color: rgb(232, 74, 100);
+    border: 1px solid black;
+    height: 24px;
+    border-radius: 30px;
+    margin-left: 40px;
+    margin-bottom: 100px;
+
+}
